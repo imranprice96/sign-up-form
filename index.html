@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
 <body>
     <div id="background-container">
@@ -31,16 +32,16 @@
         </div>
         <fieldset>
             <div id="form-container">
-                <form action="#" method="get" class="form">    
+                <form action="#" method="get" class="form" id="create-account">    
                     <div id="form-title" class="input">Let's do this!</div>
                     <div class="input-row">
                         <div class="input">
                             <label for="first-name">First name</label>
-                            <input type="text" name="first-name" id="first-name">
+                            <input type="text" name="first-name" id="first-name" minlength="1" required>
                         </div>
                         <div class="input">
                             <label for="last-name">last name</label>
-                            <input type="text" name="last-name" id="last-name">
+                            <input type="text" name="last-name" id="last-name" minlength="1" required>
                         </div>
                     </div>
                    <div class="input-row">
@@ -50,24 +51,24 @@
                         </div>
                         <div class="input">
                             <label for="phone-number">Phone</label>
-                            <input type="tel" name="phone-number" id="phone-number">
+                            <input type="tel" name="phone-number" id="phone-number" required>
                         </div>
                    </div>
                     <div class="input-row">
                         <div class="input">
                             <label for="password">Password*</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" oninput="verifyPassword()" id="password" minlength="4" required>
                         </div>
                         <div class="input">
-                            <label for="confirm-password">Confirm password*</label>
-                            <input type="password" name="confirm-password" id="confirm-password">
+                            <label for="confirm-password" >Confirm password*</label>
+                            <input type="password" name="confirm-password" oninput="verifyPassowrd()" id="confirm-password" minlength="4" required>
                         </div>
                     </div>
                 </form>
             </div>
         </fieldset>
         <div id="bottom-container">
-            <button type="submit" class="submit">create account</button>
+            <button type="submit" class="submit" form="create-account">create account</button>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
         

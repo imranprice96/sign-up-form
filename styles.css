@@ -57,26 +57,30 @@ body{
 #content{
     display: flex;
     flex-direction: column;
-    background-color: gray;
-    width: 100vw;
+    background-color: #39384C;
+    width: 60vw;
     height: 100vh;
 }
 
 #top-container{
-    background-color: #DDDDDD;
     height: var(--header);
     padding: 5%;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    color: white;
+}
+
+#top-container p:first-child{
+    padding-top: 50px;
 }
 
 #form-container{
     background-color: white;
     height:  var(--form);
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 10px 2px -2px rgb(39, 39, 39);
+    border-radius: 10px;
 }
 
 #bottom-container{
-    background-color: #DDDDDD;
     height:  var(--header);
     padding: 5%;
     font-size: 1.2rem;
@@ -86,11 +90,25 @@ body{
     font-size: 1.2rem;
     padding: 10px 50px 10px 50px;
     border-radius: 20px;
-    background-color: rgb(247, 141, 54);
+    background-color: rgb(247, 141, 54);;
     color: white;
     text-transform: capitalize;
     border: none;
     cursor: pointer;
+}
+
+.submit:hover{
+    color:rgb(247, 141, 54);
+    background-color: white;
+}
+
+#bottom-container a{
+    color: rgb(247, 141, 54);
+    font-weight: bold;
+}
+
+#bottom-container p{
+    color: white;
 }
 
 .form{
@@ -128,8 +146,8 @@ body{
 .input input:focus{
     background-color: #DDDDDD;
     outline: none;
-    border: 2px solid orange;
 }
+
 
 .input label{
     padding-bottom: 2px;
